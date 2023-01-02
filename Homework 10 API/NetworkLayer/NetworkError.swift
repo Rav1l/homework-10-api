@@ -1,6 +1,6 @@
 import Foundation
 
-enum NetworkErrors: Error {
+enum NetworkError: Error {
     case cancelled
     case customError(description: String)
     case noInternetConnectionError
@@ -9,7 +9,7 @@ enum NetworkErrors: Error {
     case unknownError
 }
 
-extension NetworkErrors: LocalizedError {
+extension NetworkError: LocalizedError {
     
     var errorDescription: String? {
         switch self {

@@ -1,6 +1,6 @@
 import UIKit
 
-class TableTableViewController: UITableViewController {
+class MemesTableVC: UITableViewController {
     
     private let url = "https://api.imgflip.com/get_memes"
     private let networkService = NetworkService()
@@ -25,13 +25,15 @@ class TableTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = memes[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MemCell", for: indexPath) as? MemesTableViewCell else { return UITableViewCell() }
+        
+        cell.setup(text: self.memes[indexPath.row].name)
         return cell
     }
+ 
     
     private func fetchData() {
-        self.networkService.getMemes(url: url) { result in
+        self.networkService.getMemes { result in
             DispatchQueue.main.async {
                 self.memes = (try? result.get()) ?? []
                 self.tableView.reloadData()
@@ -40,9 +42,9 @@ class TableTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showSecond" else { return }
+        guard segue.identifier == "showMemVC" else { return }
         
-        guard let destination = segue.destination as? ViewController else { return }
+        guard let destination = segue.destination as? MemVC else { return }
         
         if let index = self.tableView.indexPathForSelectedRow {
             let url = URL(string: self.memes[index.row].url)

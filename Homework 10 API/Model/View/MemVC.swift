@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class MemVC: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLable: UILabel!
