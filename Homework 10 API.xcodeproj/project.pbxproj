@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F109BCA22964575300F16E08 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109BCA12964575300F16E08 /* PhotoVC.swift */; };
+		F109BCA42964577000F16E08 /* PhotoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109BCA32964577000F16E08 /* PhotoTableVC.swift */; };
 		F138CC17295CADF4005FD6BA /* MemesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138CC16295CADF4005FD6BA /* MemesTableVC.swift */; };
 		F138CC1B295CB51A005FD6BA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138CC1A295CB51A005FD6BA /* NetworkError.swift */; };
 		F1A44BDA29631CDA00E18E5A /* UrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A44BD929631CDA00E18E5A /* UrlRequest.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F109BCA12964575300F16E08 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
+		F109BCA32964577000F16E08 /* PhotoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableVC.swift; sourceTree = "<group>"; };
 		F138CC16295CADF4005FD6BA /* MemesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesTableVC.swift; sourceTree = "<group>"; };
 		F138CC1A295CB51A005FD6BA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		F1A44BD929631CDA00E18E5A /* UrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequest.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				F1A44BDC2963293800E18E5A /* MemesTableViewCell.swift */,
 				F1A44BE02963350700E18E5A /* CharactersTableVC.swift */,
 				F1E6BEE4296339ED00952B86 /* CharacterVC.swift */,
+				F109BCA12964575300F16E08 /* PhotoVC.swift */,
+				F109BCA32964577000F16E08 /* PhotoTableVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,10 +207,12 @@
 				F138CC1B295CB51A005FD6BA /* NetworkError.swift in Sources */,
 				F1E6BEE72963475E00952B86 /* Photos.swift in Sources */,
 				F138CC17295CADF4005FD6BA /* MemesTableVC.swift in Sources */,
+				F109BCA42964577000F16E08 /* PhotoTableVC.swift in Sources */,
 				F1CB0E73295B8AC900882FE2 /* SceneDelegate.swift in Sources */,
 				F1A44BDA29631CDA00E18E5A /* UrlRequest.swift in Sources */,
 				F1E6BEE5296339ED00952B86 /* CharacterVC.swift in Sources */,
 				F1A44BDF296333A400E18E5A /* Characters.swift in Sources */,
+				F109BCA22964575300F16E08 /* PhotoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

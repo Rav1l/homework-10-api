@@ -2,7 +2,6 @@ import UIKit
 
 class MemesTableVC: UITableViewController {
     
-    private let url = "https://api.imgflip.com/get_memes"
     private let networkService = NetworkService()
     private var memes = [Mem]()
     

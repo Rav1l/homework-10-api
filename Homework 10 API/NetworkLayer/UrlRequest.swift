@@ -10,7 +10,7 @@ enum Request {
             return "https://api.imgflip.com/get_memes"
         case .fetchCharacters:
             return "https://rickandmortyapi.com/api/character"
-        case .fecthPhotos:
+        case .fetchPhotos:
             return "https://picsum.photos/v2/list"
         }
     }

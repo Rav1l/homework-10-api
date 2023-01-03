@@ -3,7 +3,7 @@ import Foundation
 protocol NetworkServiceProtocol {
     func getMemes(completion: @escaping (Result<Array<Mem>, NetworkError>) -> Void)
     func getCharacters(completion: @escaping (Result<Array<Character>, NetworkError>) -> Void)
-    func getCharacters(completion: @escaping (Result<Array<Photo>, NetworkError>) -> Void)
+    func getPhotos(completion: @escaping (Result<Array<Photo>, NetworkError>) -> Void)
 }
 
 
@@ -37,8 +37,8 @@ final class NetworkService:NetworkServiceProtocol {
         }
     }
     
-    func getCharacters(completion: @escaping (Result<Array<Photo>, NetworkError>) -> Void) {
-        fetch(request: .fetchCharacters, struct: Array<Photo>.self) { result in
+    func getPhotos(completion: @escaping (Result<Array<Photo>, NetworkError>) -> Void) {
+        fetch(request: .fetchPhotos, struct: Array<Photo>.self) { result in
             do {
                 let photos = try result.get()
                 completion(Result.success(photos))
